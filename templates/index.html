@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Dashboard</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>API Dashboard</h1>
+    <h2>Developed by Ritee Sharma</h2>
+
+    <label for="start_date">Select Start Date:</label>
+    <input type="date" id="start_date" name="start_date">
+
+    <label for="end_date">Select End Date:</label>
+    <input type="date" id="end_date" name="end_date">
+
+
+
+    <button onclick="getTotalSales()">Get Total Sales</button>
+    <div id="total_sales_result" class="response-container" aria-live="polite"></div>
+    <label for="category">Select Product Category:</label>
+    <select id="category"></select>
+
+    <button onclick="getSalesByCategory()">Get Sales by Category</button>
+    <div id="sales_by_category_result" class="response-container" aria-live="polite"></div>
+
+    <button onclick="getMarketShareChanges()">Get Market Share Changes</button>
+    <div id="market_share_changes_result" class="response-container" aria-live="polite"></div>
+</div>
+
+<footer>
+    <p>© 2024 Ritee Sharma | <a href="https://github.com/riteesharma">GitHub</a></p>
+</footer>
+
+<script src="../static/js/script.js"></script>
+</body>
+</html>
