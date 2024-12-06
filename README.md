@@ -1,9 +1,9 @@
 # GobbleCube_Task
 
-Overview
+# Overview
 This project involves creating a backend service to support an analytical dashboard. The service processes data from CSV files, provides RESTful APIs for querying data, and includes a simple frontend for user interaction. It enables efficient analysis of sales and market trends across product categories.
 
-Features
+# Features
 API Endpoints:
 Retrieve total sales for a specified date range.
 Fetch sales data grouped by product categories.
@@ -18,7 +18,7 @@ Sales Data: Contains transaction details.
 Category Share Data: Contains market share details.
 Product Category Mapping: Maps products to categories.
 
-Technologies Used
+# Technologies Used
 Backend:
 Flask: Lightweight Python framework for building RESTful APIs.
 Pandas: For data manipulation and efficient CSV file handling.
@@ -29,7 +29,7 @@ Tools:
 Postman: For API testing.
 Render (Deployment): Backend hosted for public access.
 
-API Endpoints
+# API Endpoints
 Retrieve Total Sales
 Endpoint: /total_sales
 Parameters: start_date, end_date.
