@@ -1,57 +1,88 @@
-# GobbleCube_Task
+# API Locator Dashboard  
 
-This project involves creating a backend service to support an analytical dashboard. The service processes data from CSV files, provides RESTful APIs for querying data, and includes a simple frontend for user interaction. It enables efficient analysis of sales and market trends across product categories.
+This project is an *API Dashboard* for tracking total sales, category-specific sales, and market share changes across products. It features a front-end user interface for interacting with the APIs and a back-end built with Flask. The project is hosted online and integrates datasets for sales, product categories, and market share.  
 
-# Features
-API Endpoints:
-Retrieve total sales for a specified date range.
-Fetch sales data grouped by product categories.
-Identify significant changes in market share for categories.
-Frontend Dashboard:
-Built using HTML, CSS, and JavaScript.
-Interactive inputs to specify date ranges and categories.
-Visual response display for API results.
-CSV Integration:
-Data loaded from three CSV files:
-Sales Data: Contains transaction details.
-Category Share Data: Contains market share details.
-Product Category Mapping: Maps products to categories.
+## Features  
+- *Fetch Total Sales:* Calculate total sales within a specified date range.  
+- *Category-Specific Sales:* Retrieve total sales for a specific product category within a date range.  
+- *Market Share Changes:* Identify the category with the highest market share change (positive or negative) within a date range.  
+- *Dynamic Dropdowns:* Fetch and display available product categories dynamically from the API.  
 
-# Technologies Used
-Backend:
-Flask: Lightweight Python framework for building RESTful APIs.
-Pandas: For data manipulation and efficient CSV file handling.
-Frontend:
-HTML, CSS, JavaScript: To create a minimal dashboard for user interaction.
-JavaScript's fetch API: To call the backend endpoints.
-Tools:
-Postman: For API testing.
-Render (Deployment): Backend hosted for public access.
+---
 
-# API Endpoints
-Retrieve Total Sales
-Endpoint: /total_sales
-Parameters: start_date, end_date.
-Response: Total revenue within the date range.
-Fetch Sales by Category
-Endpoint: /sales_by_category
-Parameters: start_date, end_date, category_id.
-Response: Sales data for the specified category.
-Analyze Market Share Changes
-Endpoint: /market_share_changes
-Parameters: start_date, end_date.
-Response: Category with the most significant market share change.
-Get Categories
-Endpoint: /categories
-Response: List of all product categories.
-System Design
-Architecture
-Backend:
-Flask handles API requests, processes data with Pandas, and merges datasets efficiently.
-CSV files act as the database.
-Frontend:
-Provides input fields for selecting date ranges and categories.
-Displays API results in JSON format for simplicity.
-Data Joining Logic
-Merged Sales Data with Product Category Mapping for category-level insights.
-Merged the result with Category Share Data for market trend analysis.
+## Live Demo  
+The project is hosted at: [API Locator Dashboard](https://gobblecube-api-dashboard.onrender.com/)  
+
+---
+
+## Installation  
+
+### Prerequisites  
+- Python 3.10 or higher  
+- Flask  
+- Pandas  
+- A modern browser (e.g., Chrome, Firefox)  
+
+### Steps  
+
+1. Clone the repository:  
+   bash
+   git clone [https://github.com/username/repo-name.git](https://github.com/Riteeeeee/GobbleCube_Task/)
+   cd GobbleCube_Task
+     
+
+2. Install dependencies:  
+   bash
+   pip install -r requirements.txt
+     
+
+3. Run the application:  
+   bash
+   python app.py
+     
+
+4. Open the application in your browser:  
+   arduino
+   http://127.0.0.1:5000
+
+## API Endpoints  
+
+### 1. /total_sales  
+- *Method:* GET  
+- *Description:* Retrieves the total sales within a specified date range.  
+- *Parameters:*  
+  - start_date (required): Start of the date range.  
+  - end_date (required): End of the date range.  
+
+### 2. /categories  
+- *Method:* GET  
+- *Description:* Fetches the available product categories.  
+
+### 3. /sales_by_category  
+- *Method:* GET  
+- *Description:* Retrieves total sales for a specific category in a date range.  
+- *Parameters:*  
+  - start_date (required): Start of the date range.  
+  - end_date (required): End of the date range.  
+  - category_id (required): ID of the category to retrieve sales for.  
+
+### 4. /market_share_changes  
+- *Method:* GET  
+- *Description:* Identifies the category with the highest market share change.  
+- *Parameters:*  
+  - start_date (required): Start of the date range.  
+  - end_date (required): End of the date range.  
+
+---
+
+## Technologies Used  
+- *Back-end:* Flask  
+- *Front-end:* HTML, CSS, JavaScript  
+- *Data Processing:* Pandas  
+- *Hosting:* [Render](https://render.com)  
+
+---
+
+## Author  
+Developed by *Ritee Sharma*.  
+GitHub: [https://github.com/riteesharma](https://github.com/Riteeeeee)
