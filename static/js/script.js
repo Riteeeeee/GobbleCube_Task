@@ -1,7 +1,7 @@
 
 // Function to fetch categories from backend
 async function fetchCategories() {
-    const url = 'http://127.0.0.1:5000/categories';
+    const url = 'https://gobblecube-apidashboard.onrender.com';
 
     try {
         const response = await fetch(url);
