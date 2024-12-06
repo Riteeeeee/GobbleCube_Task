@@ -1,6 +1,5 @@
 # GobbleCube_Task
 
-# Overview
 This project involves creating a backend service to support an analytical dashboard. The service processes data from CSV files, provides RESTful APIs for querying data, and includes a simple frontend for user interaction. It enables efficient analysis of sales and market trends across product categories.
 
 # Features
