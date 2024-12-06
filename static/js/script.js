@@ -1,7 +1,7 @@
 
 // Function to fetch categories from backend
 async function fetchCategories() {
-    const url = 'https://gobblecube-apidashboard.onrender.com';
+    const url = 'https://gobblecube-api-dashboard.onrender.com/categories';
 
     try {
         const response = await fetch(url);
@@ -37,7 +37,7 @@ async function getTotalSales() {
         return;
     }
 
-    const url = `http://127.0.0.1:5000/total_sales?start_date=${startDate}&end_date=${endDate}`;
+    const url = `https://gobblecube-api-dashboard.onrender.com/total_sales?start_date=${startDate}&end_date=${endDate}`;
     const resultContainer = document.getElementById('total_sales_result');
 
     try {
@@ -67,7 +67,7 @@ async function getSalesByCategory() {
         return;
     }
 
-    const url = `http://127.0.0.1:5000/sales_by_category?start_date=${startDate}&end_date=${endDate}&category_id=${categoryId}`;
+    const url = `https://gobblecube-api-dashboard.onrender.com/sales_by_category?start_date=${startDate}&end_date=${endDate}&category_id=${categoryId}`;
     const resultContainer = document.getElementById('sales_by_category_result');
 
     try {
@@ -96,7 +96,7 @@ async function getMarketShareChanges() {
         return;
     }
 
-    const url = `http://127.0.0.1:5000/market_share_changes?start_date=${startDate}&end_date=${endDate}`;
+    const url = `https://gobblecube-api-dashboard.onrender.com/market_share_changes?start_date=${startDate}&end_date=${endDate}`;
     const resultContainer = document.getElementById('market_share_changes_result');
 
     try {
